@@ -1,63 +1,59 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
 }
 body{
-  background-image: linear-gradient(to right, red, blue);
+  background-image: linear-gradient(to right, red,blue);
 }
-.chat__section{
-  background-image: linear-gradient(to right, red, blue);
-  border: 3px solid black;
-  height: 100vh;
-  width: 100vw;
-  /*display: flex;
-  flex-direction: column;
-  */
- 
-  position: fixed;
+::-webkit-scrollbar{
+  width: 1px;
 }
-.message__area{
- 
-  margin: 1rem;
-  overflow-y: scroll;
-  overflow-x: scroll;
-/*  border: 2px sloid black;*/
-  color:black;
-  /*background-color: aqua;*/
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 1rem;
-  height: 80vh;
-  font-weight: bold;
+::-webkit-scrollbar-track{
+  background: transparent
 }
 .brand{
- 
-  text-align: center; 
   color: white;
-  height: 2vh;
-  width: 80vw;
-  padding-left: 4rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  background-color: black;
+  width: 100vw;
+  text-align: center;
+  height: 5vh;
+  display: flex;
+  padding: 2rem;
+  grid-gap: 2rem;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
-#textarea{
- 
-  margin-left: 0%;
-  border: 2px sloid black;
-  position: absolute;
-  top:46rem;
-  height: 6vh;
-  width: 100%;
-  background-color:black;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 20px;
-  display: grid;
-}
-.message{
-  background-color: brown;
+h3{
   color: aqua;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 1rem;
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 2rem;
+}
+.chat__section{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.message__area{
+  height: 85vh;
+  width: 80vw;
+  color: wheat;
+  font-size: 2rem;
+  background-color: transparent;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  overflow: scroll;
 }
 .incoming{
   margin: 2%;
@@ -67,7 +63,6 @@ body{
   color: white;
   padding: 1rem;
   margin-right: 6rem;
-  overflow-x: scroll;  
   overflow-wrap: break-word;
 }
 .outgoing{
@@ -78,5 +73,204 @@ body{
   color: white;
   margin-left: 6rem;
   padding: 1rem;
-  overflow-wrap: break-word;
 }
+h4{
+  color: aqua;
+ }
+#textarea{
+  border-radius: 1rem;
+  border: 3px solid aqua;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  margin:1rem;
+  width: 80vw;
+  height: 5vh;
+  overflow: hidden;
+}
+button{
+  background-color: black;
+  color: aqua;
+  font-size: bold;
+  width: 5rem;
+  height: 3vh;
+  border-radius: 1rem;
+  border: 1px solid aqua;
+}
+#option{
+  color: aqua;
+  height: 80vh;
+  width: 80vw;
+  border-radius: 3rem;
+  border: 2px solid white;
+  position: fixed;
+  display: none;
+  background-image: linear-gradient(to right, red,blue);
+  box-shadow: 2px 2px 40px 2px black;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  list-style:none;
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 3rem;
+  
+}
+li{
+  border-radius: 2rem;
+  border: 2px solid aqua;
+  margin: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  
+  
+}
+li:hover{
+  background-color: black;
+  border: 2px solid aqua;
+    
+}
+ul{
+  text-align: center;
+
+  margin: 2rem;
+  list-style:none;
+}
+a{
+  text-decoration: none;
+  color: aqua;
+}
+#btn{
+  position: fixed;
+  top: 20rem;
+  margin: -18rem;
+  color: aqua;
+}
+#users{
+  height: 80vh;
+  width: 80vw;
+  color: white;
+  border: 2px solid white;
+  border-radius: 2rem;
+  position: fixed;
+  top: 4rem;
+  display: none;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  background-image: linear-gradient(to right, red,blue);
+  box-shadow: 4px 4px 10px 4px black;
+  overflow:scroll;
+  margin: 3rem;
+}
+#users p{
+  text-align: center;
+  margin: 2rem;
+  font-weight: bold;
+  color: aqua;
+  font-size: 1.5rem;
+}
+#users a{
+  color:rgb(221, 22, 22);
+}
+#users button{
+  position: fixed;
+  top:25rem;
+  height: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid white;
+  
+}
+#usr {
+  height: 80vh;
+  width: 80vw;
+  background-image: linear-gradient(to right, red,blue);
+  color: white;
+  border: 2px solid white;
+  font-weight: 100;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  overflow: scroll;
+}
+#usr p{
+  display: inline-block;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 2rem;
+  border: 2px solid aqua;
+  overflow: scroll;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 20vh;
+  margin: 1rem;
+  text-align: center;
+  width: 20vw;
+  
+}
+#usr li{
+  color: white;
+}
+
+/* media  for phone */
+@media only screen 
+    and (min-width : 30px)  and (max-width:450px)
+    and (min-height : 80px) and (max-height:1000px) 
+    {
+ 
+      .brand{
+        color: white;
+        background-color: black;
+        width: 100vw;
+        text-align: center;
+        height: 7vh;
+      }
+      #textarea{
+        border-radius: 1rem;
+        border: 3px solid aqua;
+        font-size: 1rem;
+        background-color: black;
+        color: white;
+        margin:1rem;
+        width: 80vw;
+        height: 5vh;
+        padding: 0.3rem;
+        overflow: hidden;
+      }
+      .message__area{
+
+        height: 85vh;
+        width: 80vw;
+        color: wheat;
+        font-size: 1rem;
+        background-color: transparent;
+        overflow-y: scroll;
+        
+      }
+      #option{
+        font-size: 1.5rem;
+      }
+      #option li{
+        margin: 1rem;
+        padding: 1rem;
+      }
+     
+
+    }
+
+    
