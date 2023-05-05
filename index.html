@@ -7,21 +7,40 @@
     <title>m-chatapp.com</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
- <section class="chat__section">
-<div class="brand">
-    <h1>m-chat</h1>
-</div>
-<div class="message__area">
-    <div id="incoming__message">
-    </div>
-     <div id="outgoing__message">
-    </div>
-</div>
-</section>
-<textarea onmouseover="up()" id="textarea" cols="30" rows="1" placeholder="Enter your message...."></textarea>
-
-<script src="/socket.io/socket.io.js"></script>   
-<script src="/client.js"></script>
+<audio id="audio">
+    <source src="ting.mp3" type="audio/mp3">
+</audio>
+<body id="main">
+    <section class="chat__section">
+        <div class="brand">
+            <button onclick="option()">Option</button>
+            <h1>m-chat</h1>
+            <button onclick="dark()">Dark mode</button>
+        </div>
+        <div class="message__area">
+            <div id="incoming__message">
+            </div>
+            <div id="outgoing__message">
+            </div>
+        </div>
+        <textarea id="textarea" cols="30" rows="1" placeholder="Enter your message...."></textarea>
+        <div id="option">
+            <ul>
+                <li onclick="about()">Live users</li>
+                <a href="https://karan-kumar-mishra.github.io/karanofficial-/" target="_blank"><li>Contact to devloper</li></a>  
+                <li onclick="back()">Back</li>
+                <li onclick="history.back()">Log out</li>
+            </ul>
+        </div>
+        <div id="users">
+            <ul id="usr">    
+            </ul>
+            <button id="btn"onclick="back_to_users()">Back</button>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>   
+    <script src="/client.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
 </body>
+
 </html>
