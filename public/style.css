@@ -4,10 +4,16 @@
   box-sizing: border-box;
   outline: none;
   scroll-behavior: smooth;
+  
+}
+html{
+  scroll-behavior: smooth;
 }
 body{
-  background-image: linear-gradient(to right, red,blue);
+ 
+  background-color: #172634;
 }
+
 ::-webkit-scrollbar{
   width: 1px;
 }
@@ -37,6 +43,14 @@ h3{
   border: 2px solid white;
   background-color: black;
   border-radius: 2rem;
+}
+h1{
+  animation-name: anim;
+  animation-duration: 1.7s;
+}
+@keyframes anim {
+  from {font-size: 0rem}
+  to {font-size:1.5rem;}
 }
 .chat__section{
   display: grid;
@@ -74,6 +88,7 @@ h3{
   margin-left: 6rem;
   padding: 1rem;
 }
+
 h4{
   color: aqua;
  }
@@ -91,6 +106,7 @@ h4{
 button{
   background-color: black;
   color: aqua;
+  
   font-size: bold;
   width: 5rem;
   height: 3vh;
@@ -105,7 +121,8 @@ button{
   border: 2px solid white;
   position: fixed;
   display: none;
-  background-image: linear-gradient(to right, red,blue);
+ 
+  background-color: #172634;
   box-shadow: 2px 2px 40px 2px black;
   justify-content: center;
   align-items: center;
@@ -115,16 +132,29 @@ button{
   font-weight: bold;
   font-size: 3rem;
   margin: 3rem;
-  
+  overflow: scroll;
+  padding-top: 6rem;
+  animation-name: anmi2;
+  animation-duration: 1.5s;
+}
+@keyframes anmi2 {
+  from{
+    height: 0vh;
+    width: 0vw;
+   
+  }
+  to{
+    height: 80vh;
+    width: 80vw;
+   
+  }
 }
 li{
-  border-radius: 2rem;
-  border: 2px solid aqua;
-  margin: 1.5rem;
-  text-align: center;
-  padding: 0.5rem;
-  
-  
+    border-radius: 2rem;
+    border: 2px solid aqua;
+    margin: 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
 }
 li:hover{
   background-color: black;
@@ -141,12 +171,20 @@ a{
   text-decoration: none;
   color: aqua;
 }
+
 #btn{
   position: fixed;
   top: 20rem;
   margin: -18rem;
   color: aqua;
 }
+#btn1{
+  transition-duration: 6s;
+  transition-property: diplay;
+  transition-delay: 5s;
+}
+
+
 #users{
   height: 80vh;
   width: 80vw;
@@ -160,10 +198,24 @@ a{
   align-content: center;
   justify-content: center;
   justify-items: center;
-  background-image: linear-gradient(to right, red,blue);
+  /*background-image: linear-gradient(to right, red,blue);*/
+  background-color: #172634;
   box-shadow: 4px 4px 10px 4px black;
   overflow:scroll;
   margin: 3rem;
+  animation: anim3;
+  animation-duration: 2s;
+}
+@keyframes anim3 {
+  from{
+    height: 0vh;
+    width: 0vw;
+  }
+  to{
+    height: 80vh;
+    width: 80vw;
+  }
+  
 }
 #users p{
   text-align: center;
@@ -187,7 +239,8 @@ a{
 #usr {
   height: 80vh;
   width: 80vw;
-  background-image: linear-gradient(to right, red,blue);
+  /*background-image: linear-gradient(to right, red,blue);*/
+  background-color: #172634;
   color: white;
   border: 2px solid white;
   font-weight: 100;
@@ -226,7 +279,49 @@ a{
 #usr li{
   color: white;
 }
-
+#set_color{
+  border: 2px solid white;
+  height: 60vh;
+  width: 15vw;
+  border-radius: 2rem;
+  color: aqua;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  padding: 2rem;
+  position: fixed;
+  top:5rem;
+  margin: 25rem;
+  margin-top: 4rem;
+  z-index: 10;
+  background-color:#172634;
+  font-size: 2rem;
+  text-align: center;
+  animation: anim8;
+  animation-duration: 1s;
+}
+@keyframes anim8 {
+  from{
+    height: 0vh;
+  width: 0vw;
+  } 
+  to{
+    height: 60vh;
+  width: 15vw;
+  } 
+}
+#set_color label{
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 1px;
+  margin: 1px;
+  text-align: center;
+  margin-top: 100%;
+}
+#set_color input{
+  margin: 1rem;
+}
 /* media  for phone */
 @media only screen 
     and (min-width : 30px)  and (max-width:450px)
@@ -264,13 +359,50 @@ a{
       }
       #option{
         font-size: 1.5rem;
+        margin-top: 2rem;
       }
       #option li{
         margin: 1rem;
         padding: 1rem;
       }
      
-
+      #set_color{
+        border: 2px solid white;
+        height: 60vh;
+        width: 40vw;
+        border-radius: 2rem;
+        color: aqua;
+        padding: 1rem;
+        display: none;
+        flex-direction: column;
+        padding: 1rem;
+        position: fixed;
+        top:5rem;
+        margin: 7rem;
+        margin-top: 4rem;
+        z-index: 10;
+        background-color:#172634;
+        font-size: 1rem;
+        text-align: center;
+        
+      }
+      #set_color label{
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 2rem;
+        padding: 1px;
+        margin: 1px;
+        height: 5vh;
+        text-align: center;
+        margin-top: 140%;
+        text-align: center;
+      }
+      #set_color input{
+        margin: 2rem;
+        height: 10vh;
+        width: 15vw;
+        text-align: center;
+      }
     }
 
     
