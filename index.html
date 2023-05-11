@@ -11,11 +11,17 @@
     <source src="ting.mp3" type="audio/mp3">
 </audio>
 <body id="main">
+    
+    <div id="set_color">
+       
+         <input type="color" id="color-picker" name="color-picker">
+         <label onclick="color_back()">back</label>
+    </div>
     <section class="chat__section">
         <div class="brand">
-            <button onclick="option()">Option</button>
+            <button id="btn1" onclick="option()">Option</button>
             <h1>m-chat</h1>
-            <button onclick="dark()">Dark mode</button>
+            <button id="btn2" onclick="color()">Dark mode</button>
         </div>
         <div class="message__area">
             <div id="incoming__message">
@@ -29,6 +35,7 @@
                 <li onclick="about()">Live users</li>
                 <a href="https://karan-kumar-mishra.github.io/karanofficial-/" target="_blank"><li>Contact to devloper</li></a>  
                 <li onclick="back()">Back</li>
+                <li onclick="theam()">Themes</li>
                 <li onclick="history.back()">Log out</li>
             </ul>
         </div>
