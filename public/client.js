@@ -3,7 +3,7 @@ let name;
 var x = document.getElementById("audio");
 let textarea = document.querySelector('#textarea');
 let messageArea = document.querySelector('.message__area');
-
+var currentDate = new Date();
 do{
   name = prompt("Enter your name to join the chat =>> ");
   socket.emit('joins',name)
@@ -11,7 +11,7 @@ do{
 
 socket.on('left',(name)=>{
   const para = document.createElement("h3");
-  para.innerText = name+" left the chat..";
+  para.innerText = name+" left the chat.. ";
   usr.appendChild(para);
 })
 socket.on('come',(name)=>{
@@ -58,21 +58,32 @@ socket.on('message', (msg) => {
 function scrollToBottom() {
   messageArea.scrollTop = messageArea.scrollHeight;
 }
-function dark(){
-  if(document.getElementById('main').style.background=="black")
+function color(){
+  if( document.getElementById('main').style.backgroundColor=="black")
   {
-    document.getElementById('main').style.backgroundImage ="linear-gradient(to right, red,blue)";
-    document.getElementById('option').style.backgroundImage ="linear-gradient(to right, red,blue)";
-    document.getElementById('users').style.backgroundImage="linear-gradient(to right, red,blue)";
-    document.getElementById('usr').style.backgroundImage="linear-gradient(to right, red,blue)";
+    document.getElementById('main').style.backgroundColor="#172634";
+    document.getElementById('option').style.backgroundColor ="#172634";
+    document.getElementById('users').style.backgroundColor ="#172634";    
+    document.getElementById('usr').style.backgroundColor="#172634";
   }
   else{
-    document.getElementById('main').style.background="black";
-    document.getElementById('option').style.background ="black";
-    document.getElementById('users').style.background ="black";    
-    document.getElementById('usr').style.background="black";
+    document.getElementById('main').style.backgroundColor="black";
+    document.getElementById('option').style.backgroundColor ="black";
+    document.getElementById('users').style.backgroundColor ="black";    
+    document.getElementById('usr').style.backgroundColor="black";
   }
   
+}
+function theam(){
+  document.getElementById('set_color').style.display="flex";
+  1
+    const colorPicker = document.getElementById('color-picker');
+    colorPicker.addEventListener('input', function() {
+    document.getElementById('main').style.backgroundColor=colorPicker.value;
+    document.getElementById('option').style.backgroundColor =colorPicker.value;
+    document.getElementById('users').style.backgroundColor =colorPicker.value;    
+    document.getElementById('usr').style.backgroundColor=colorPicker.value;
+    });
 }
 function option(){
   if(document.getElementById('option').style.display=="flex")
@@ -96,4 +107,6 @@ function about()
 {
     document.getElementById('users').style.display="flex";
 }
- 
+function color_back(){
+  document.getElementById('set_color').style.display="none";
+}
