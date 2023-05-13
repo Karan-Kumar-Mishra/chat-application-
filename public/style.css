@@ -293,6 +293,10 @@ a{
   top:5rem;
   margin: 25rem;
   margin-top: 4rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
   z-index: 10;
   background-color:#172634;
   font-size: 2rem;
@@ -311,13 +315,21 @@ a{
   } 
 }
 #set_color label{
-  font-weight: bold;
-  border: 2px solid white;
-  border-radius: 2rem;
-  padding: 1px;
-  margin: 1px;
-  text-align: center;
-  margin-top: 100%;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 2rem;
+    padding: 1px;
+    margin: 1px;
+    width: 5rem;
+    text-align: center;
+    margin-top: 100%;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
 }
 #set_color input{
   margin: 1rem;
@@ -380,6 +392,8 @@ a{
         top:5rem;
         margin: 7rem;
         margin-top: 4rem;
+        
+        align-content: center;
         z-index: 10;
         background-color:#172634;
         font-size: 1rem;
