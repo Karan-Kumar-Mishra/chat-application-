@@ -9,7 +9,7 @@ app.use(express.static(__dirname +'/public'))
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/index.html')
 })
-var users_in_chat=[];
+var users_in_chat={};
 let u_name;
 let i=0;
 const io=require('socket.io')(http)
@@ -19,8 +19,8 @@ io.on('connection',(socket)=>{
     socket.on('joins',(name)=>{
         console.log(name+' join the chat..');
         u_name=name;
-        users_in_chat.push(name);
-        socket.broadcast.emit('come',name);       
+        users_in_chat[socket.id]=name;
+        socket.broadcast.emit('come',users_in_chat[socket.id]);       
     })
     i=i+1;
     socket.on('message',(msg)=>{
@@ -28,9 +28,9 @@ io.on('connection',(socket)=>{
     })
     socket.on('disconnect',function()
     {
-        socket.broadcast.emit('left',u_name);
+        socket.broadcast.emit('left',users_in_chat[socket.id]);
         console.log("disconnected...")
-        users_in_chat.pop();
+        delete users_in_chat[socket.id];
     })
     console.log("live user => "+users_in_chat);
 })
