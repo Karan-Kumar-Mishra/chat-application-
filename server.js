@@ -15,7 +15,7 @@ let i=0;
 const io=require('socket.io')(http)
 io.on('connection',(socket)=>{
     socket.emit('get-users',users_in_chat);
-    console.log('connected....')
+    
     socket.on('joins',(name)=>{
         console.log(name+' join the chat..');
         u_name=name;
@@ -29,8 +29,8 @@ io.on('connection',(socket)=>{
     socket.on('disconnect',function()
     {
         socket.broadcast.emit('left',users_in_chat[socket.id]);
-        console.log("disconnected...")
+        
         delete users_in_chat[socket.id];
     })
-    console.log("live user => "+users_in_chat);
+    
 })
