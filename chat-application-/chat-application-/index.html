@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m-chatapp.com</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="https://pngimg.com/uploads/letter_m/small/letter_m_PNG125.png" type="image/x-icon">
+
+    
+</head>
+<audio id="audio">
+    <source src="ting.mp3" type="audio/mp3">
+</audio>
+<body id="main">
+    
+    <div id="set_color">
+       
+         <input type="color" id="color-picker" name="color-picker">
+         <label onclick="color_back()">back</label>
+    </div>
+    <section class="chat__section">
+       
+        <div class="brand">
+            <button id="btn1" onclick="option()">Option</button>
+            <h1>m-chat</h1>
+            <button id="btn2" onclick="color()">Dark mode</button>
+        </div>
+        <div class="message__area">
+            <div id="incoming__message">
+            </div>
+            <div id="outgoing__message">
+             </div>
+        </div>
+        <div id="sendmsg">
+            <textarea id="textarea" cols="30" rows="1" placeholder="Enter your message...."></textarea>
+            <button id="simg" onclick="sendImage()">Send Image</button>
+            <button onclick="sendinfo()">Send</button>
+        </div>
+        <input type="file" id="imageInput" accept="image/*">
+        <div id="option">
+            <ul>
+                <li onclick="about()">Live users</li>
+                <a href="https://karan-kumar-mishra.github.io/karanofficial-/" target="_blank"><li>Contact to devloper</li></a>  
+                <li onclick="back()">Back</li>
+                <li onclick="theam()">Themes</li>
+                <li onclick="history.back()">Log out</li>
+            </ul>
+        </div>
+        <div id="users">
+            <ul id="usr"> 
+                <div id="set_color">
+                    <input type="color" id="color-picker" name="color-picker">
+                    <label onclick="color_back()">back</label>
+               </div>   
+            </ul>
+            <button id="btn"onclick="back_to_users()">Back</button>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>   
+    <script src="/client.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+</body>
+</html>
