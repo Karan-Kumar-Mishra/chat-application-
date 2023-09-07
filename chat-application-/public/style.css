@@ -1,0 +1,476 @@
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+    
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+  
+    background-color: #172634;
+  }
+
+  ::-webkit-scrollbar{
+    width: 1px;
+  }
+  ::-webkit-scrollbar-track{
+    background: transparent
+  }
+  .brand{
+    color: white;
+    background-color: black;
+    width: 100vw;
+    text-align: center;
+    height: 5vh;
+    display: flex;
+    padding: 2rem;
+    grid-gap: 2rem;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  h3{
+    color: aqua;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 2rem;
+  }
+  h1{
+    animation-name: anim;
+    animation-duration: 1.7s;
+  }
+  @keyframes anim {
+    from {font-size: 0rem}
+    to {font-size:1.5rem;}
+  }
+  .chat__section{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  .message__area{
+    height: 85vh;
+    width: 80vw;
+    color: wheat;
+    font-size: 2rem;
+    background-color: transparent;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    overflow: scroll;
+  }
+  .incoming{
+    margin: 2%;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-right: 6rem;
+    overflow-wrap: break-word;
+  }
+  .outgoing{
+    margin: 2%;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    margin-left: 6rem;
+    padding: 1rem;
+  }
+
+  h4{
+    color: aqua;
+  }
+  #textarea{
+    border-radius: 1rem;
+    border: 3px solid aqua;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    margin:1rem;
+    width: 80vw;
+    height: 5vh;
+    overflow: hidden;
+    font-size: 0.8rem;
+  }
+  button{
+    background-color: black;
+    color: aqua;
+    
+    font-size: bold;
+    width: 5rem;
+    height: 3vh;
+    border-radius: 1rem;
+    border: 1px solid aqua;
+  }
+  #option{
+    color: aqua;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 3rem;
+    border: 2px solid white;
+    position: fixed;
+    display: none;
+  
+    background-color: #172634;
+    box-shadow: 2px 2px 40px 2px black;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    list-style:none;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 3rem;
+    overflow: scroll;
+    padding-top: 6rem;
+    animation-name: anmi2;
+    animation-duration: 1.5s;
+  }
+  @keyframes anmi2 {
+    from{
+      height: 0vh;
+      width: 0vw;
+    
+    }
+    to{
+      height: 80vh;
+      width: 80vw;
+    
+    }
+  }
+  li{
+      border-radius: 2rem;
+      border: 2px solid aqua;
+      margin: 0.5rem;
+      text-align: center;
+      padding: 0.5rem;
+  }
+  li:hover{
+    background-color: black;
+    border: 2px solid aqua;
+      
+  }
+  ul{
+    text-align: center;
+
+    margin: 2rem;
+    list-style:none;
+  }
+  a{
+    text-decoration: none;
+    color: aqua;
+  }
+
+  #btn{
+    position: fixed;
+    top: 20rem;
+    margin: -18rem;
+    color: aqua;
+  }
+  #btn1{
+    transition-duration: 6s;
+    transition-property: diplay;
+    transition-delay: 5s;
+  }
+
+
+  #users{
+    height: 80vh;
+    width: 80vw;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2rem;
+    position: fixed;
+    top: 4rem;
+    display: none;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    /*background-image: linear-gradient(to right, red,blue);*/
+    background-color: #172634;
+    box-shadow: 4px 4px 10px 4px black;
+    overflow:scroll;
+    margin: 3rem;
+    animation: anim3;
+    animation-duration: 2s;
+  }
+  @keyframes anim3 {
+    from{
+      height: 0vh;
+      width: 0vw;
+    }
+    to{
+      height: 80vh;
+      width: 80vw;
+    }
+    
+  }
+  #users p{
+    text-align: center;
+    margin: 2rem;
+    font-weight: bold;
+    color: aqua;
+    font-size: 1.5rem;
+  }
+  #users a{
+    color:rgb(221, 22, 22);
+  }
+  #users button{
+    position: fixed;
+    top:25rem;
+    height: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid white;
+    
+  }
+  #usr {
+    height: 80vh;
+    width: 80vw;
+    /*background-image: linear-gradient(to right, red,blue);*/
+    background-color: #172634;
+    color: white;
+    border: 2px solid white;
+    font-weight: 100;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    overflow: scroll;
+  }
+  #usr p{
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 2rem;
+    border: 2px solid aqua;
+    overflow: scroll;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 20vh;
+    margin: 1rem;
+    text-align: center;
+    width: 20vw;
+    
+  }
+  #usr li{
+    color: white;
+  }
+  #set_color{
+    border: 2px solid white;
+    height: 60vh;
+    width: 15vw;
+    border-radius: 2rem;
+    color: aqua;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+    position: fixed;
+    top:5rem;
+    margin: 25rem;
+    margin-top: 4rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    z-index: 10;
+    background-color:#172634;
+    font-size: 2rem;
+    text-align: center;
+    animation: anim8;
+    animation-duration: 1s;
+  }
+  @keyframes anim8 {
+    from{
+      height: 0vh;
+    width: 0vw;
+    } 
+    to{
+      height: 60vh;
+    width: 15vw;
+    } 
+  }
+  #set_color label{
+      font-weight: bold;
+      border: 2px solid white;
+      border-radius: 2rem;
+      padding: 1px;
+      margin: 1px;
+      width: 5rem;
+      text-align: center;
+      margin-top: 100%;
+      text-align: center;
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+  }
+  #set_color input{
+    margin: 1rem;
+  }
+  #sendmsg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  #sendmsg button{
+    height: 6vh;
+    border: 3px solid aqua;
+  }
+  iframe{
+    height: 50vh;
+    width: 60vw;
+    border-radius: 0.5rem;
+  }
+  #imageInput{
+    color: white;
+    width: 20vw;
+    float: left;
+    
+  }
+ 
+
+  /* media  for phone */
+  @media only screen 
+      and (min-width : 30px)  and (max-width:450px)
+      and (min-height : 80px) and (max-height:1000px) 
+      {
+  
+        .brand{
+          color: white;
+          background-color: black;
+          width: 100vw;
+          text-align: center;
+          height: 7vh;
+        }
+        #textarea{
+          border-radius: 1rem;
+          border: 3px solid aqua;
+          font-size: 1rem;
+          background-color: black;
+          color: white;
+          margin:0.2rem;
+          margin-bottom: -1rem;
+          width: 68vw;
+          height: 6vh;
+          padding: 0.3rem;
+          overflow: hidden;
+        }
+        iframe{
+          height: 30vh;
+          width: 45vw;
+          border-radius: 0.5rem;
+        }
+        #imageInput{
+          color: white;
+          width: 80vw;
+          float: right;
+          margin: 0%;
+          
+        }
+        #simg{
+          font-size: 0.5rem;
+        }
+        #sendmsg button{
+          width: 15vw;
+          height: 6vh;
+          border: 3px solid aqua;
+          margin: 0.1rem;
+          margin-top: 1rem;
+          margin-bottom: 0%;
+         
+        }
+        #sendmsg{
+          margin: 1rem;
+        }
+        .message__area{
+
+          height: 85vh;
+          width: 80vw;
+          color: wheat;
+          font-size: 1rem;
+          background-color: transparent;
+          overflow-y: scroll;
+          
+        }
+        #option{
+          font-size: 1.5rem;
+          margin-top: 2rem;
+        }
+        #option li{
+          margin: 1rem;
+          padding: 1rem;
+        }
+      
+        #set_color{
+          border: 2px solid white;
+          height: 60vh;
+          width: 40vw;
+          border-radius: 2rem;
+          color: aqua;
+          padding: 1rem;
+          display: none;
+          flex-direction: column;
+          padding: 1rem;
+          position: fixed;
+          top:5rem;
+          margin: 7rem;
+          margin-top: 4rem;
+          
+          align-content: center;
+          z-index: 10;
+          background-color:#172634;
+          font-size: 1rem;
+          text-align: center;
+          
+        }
+        #set_color label{
+          font-weight: bold;
+          border: 2px solid white;
+          border-radius: 2rem;
+          padding: 1px;
+          margin: 1px;
+          height: 5vh;
+          text-align: center;
+          margin-top: 140%;
+          text-align: center;
+        }
+        #set_color input{
+          margin: 2rem;
+          height: 10vh;
+          width: 15vw;
+          text-align: center;
+        }
+      }
+
+      
