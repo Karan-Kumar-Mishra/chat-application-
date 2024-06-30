@@ -8,7 +8,12 @@ Features:
 2.File Sharing: Highlight the ability to send various types of files, such as images, documents, videos, etc.
 3.Responsive Design: Emphasize that your application is designed to work on various devices.
 <br><br><br>
-
+# RUN USING DOCKER
+<br><br><br>
+```
+docker pull karankumarmishra/chat-app:chat-app
+docker run -p 3000:3000 <image ID>
+```
 ![Screenshot (133)](https://github.com/Karan-Kumar-Mishra/chat-application-/assets/93134411/4a66c9b8-0428-4033-8038-12fee59294e4)
 
 <br><br><br>
