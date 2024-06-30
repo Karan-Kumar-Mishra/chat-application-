@@ -14,6 +14,7 @@ Features:
 docker pull karankumarmishra/chat-app:chat-app
 docker run -p 3000:3000 <image ID>
 ```
+<br><br><br>
 ![Screenshot (133)](https://github.com/Karan-Kumar-Mishra/chat-application-/assets/93134411/4a66c9b8-0428-4033-8038-12fee59294e4)
 
 <br><br><br>
